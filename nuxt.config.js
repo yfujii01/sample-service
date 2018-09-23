@@ -25,7 +25,7 @@ module.exports = {
       `http://${host}:${port}`
   },
   head: {
-    title: "tt1",
+    title: "sample-service",
     meta: [
       { charset: "utf-8" },
       {
@@ -60,5 +60,8 @@ module.exports = {
     "@nuxtjs/axios",
     "~/modules/typescript.js"
   ],
-  axios: {}
+  axios: {},
+  router: {
+    middleware: "auth"
+  }
 }
