@@ -21,13 +21,13 @@
       }
     },
     methods: {
-      async login() {
+      login() {
         try {
-          await this.$store.dispatch('login', {
+          this.$store.dispatch('login', {
             username: this.formUsername,
             password: this.formPassword
           });
-          this.$router.push('/')
+          // this.$router.push('/')
         } catch (e) {
           this.formError = e.message
         }

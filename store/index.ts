@@ -42,6 +42,7 @@ export const actions = {
         throw new Error("ログインエラー");
       }
       commit("SET_USER", username);
+      this.$router.push('/');
     } catch (error) {
       throw error;
     }
